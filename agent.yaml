@@ -1,0 +1,12 @@
+jenkins:
+  nodes:
+    - permanent:
+        name: "agent-01"
+        remoteFS: "/home/jenkins/agent"
+        numExecutors: 2
+        labelString: "linux build"
+        launcher:
+          jnlp:
+            workDirSettings:
+              disabled: false
+              workDirPath: "/home/jenkins/agent"

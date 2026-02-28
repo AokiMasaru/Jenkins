@@ -1,0 +1,15 @@
+# jenkins.yaml
+jenkins:
+  systemMessage: "🌿 Jenkins configured by JCasC!"
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          password: "admin"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+unclassified:
+  location:
+    url: http://192.168.1.112:8080/
