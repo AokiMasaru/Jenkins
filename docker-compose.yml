@@ -11,7 +11,7 @@ services:
       - jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock  # JenkinsからホストのDockerを使う場合
     environment:
-      - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
-
+      - TZ=Asia/Tokyo
+      - JAVA_OPTS=-Djenkins.install.runSetupWizard=false -Xmx2g -Xms1g
 volumes:
   jenkins_home:
